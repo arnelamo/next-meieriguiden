@@ -1,44 +1,19 @@
 import React from "react";
 import { fetchDairyCodes } from "@/lib/fetchers/dairycodes";
-import { DairyCode } from "@/types/dairycode";
+import { DairyCode, UsesBovaerStatus } from "@/types/dairycode";
 import Image from "next/image";
 import { SearchableTable } from "@/components/meierikoder/SearchableTable";
+import dairycodesData from "@/lib/dairy-code-management/data/dairycodes_unique.json";
 
-// Sample data to use as fallback when API fails
-const fallbackData: DairyCode[] = [
-  {
-    id: 1,
-    name: "EGGEN GARDSYSTERI AS",
-    code: "M517",
-    address: "(Ikke oppgitt)",
-    place: "VINGELEN",
-    uses_bovaer: "no",
-  },
-  {
-    id: 2,
-    name: "EINAR LIE",
-    code: "2918",
-    address: "Liavegen 9",
-    place: "AURLAND",
-    uses_bovaer: "unknown",
-  },
-  {
-    id: 3,
-    name: "SYNNØVE FINDEN AS AVD ALVDAL",
-    code: "M904",
-    address: "Grindegga",
-    place: "ALVDAL",
-    uses_bovaer: "yes",
-  },
-  {
-    id: 4,
-    name: "TINE SA AVD HARSTAD",
-    code: "M350",
-    address: "Skogveien 18",
-    place: "HARSTAD",
-    uses_bovaer: "soon",
-  },
-];
+// Add IDs to the imported data for fallback
+const fallbackData: DairyCode[] = dairycodesData.map((dairy, index) => ({
+  id: index + 1,
+  name: dairy.name,
+  code: dairy.code,
+  address: dairy.address,
+  place: dairy.place,
+  uses_bovaer: dairy.uses_bovaer as UsesBovaerStatus,
+}));
 
 export default async function Meierikoder() {
   // Try to fetch data, use fallback if it fails

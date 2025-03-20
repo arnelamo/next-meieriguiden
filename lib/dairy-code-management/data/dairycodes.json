@@ -1,0 +1,1010 @@
+[
+  {
+    "code": "M413",
+    "name": "ALMGARD IS AS",
+    "address": "Sambindingsvegen 22",
+    "place": "FEIOS",
+    "uses_bovaer": "unknown"
+  },
+  {
+    "code": "M555",
+    "name": "OSTEGÅRDEN AS",
+    "address": "Krokeidevegen 511",
+    "place": "FANA",
+    "uses_bovaer": "unknown"
+  },
+  {
+    "code": "2399",
+    "name": "STORFJORD ISKREM AS",
+    "address": "Sandvikgata 30",
+    "place": "Storfjord",
+    "uses_bovaer": "unknown"
+  },
+  {
+    "code": "1305",
+    "name": "TOR STABBFORSMO",
+    "address": "Strandlivegen 5",
+    "place": "TROFORS",
+    "uses_bovaer": "unknown"
+  },
+  {
+    "code": "M419",
+    "name": "GG- IS SA v/Gjermund Granum",
+    "address": "Fjellstogovegen 24",
+    "place": "ETNEDAL",
+    "uses_bovaer": "unknown"
+  },
+  {
+    "code": "M550",
+    "name": "HANS BRIMI",
+    "address": "Ottadalsvegen 4952",
+    "place": "GARMO",
+    "uses_bovaer": "unknown"
+  },
+  {
+    "code": "1836",
+    "name": "STAVANGER YSTERI AS",
+    "address": "Ryfylkegata 13",
+    "place": "STAVANGER",
+    "uses_bovaer": "unknown"
+  },
+  {
+    "code": "2355",
+    "name": "REIDAR STENBERG",
+    "address": "Nerolsgutu 7",
+    "place": "HOL",
+    "uses_bovaer": "unknown"
+  },
+  {
+    "code": "2406",
+    "name": "LIVLAND AS",
+    "address": "Midnattsolveien 914",
+    "place": "LAUKVIK",
+    "uses_bovaer": "unknown"
+  },
+  {
+    "code": "M169",
+    "name": "TINE SA AVD FRYA",
+    "address": "Fryavegen 64",
+    "place": "RINGEBU",
+    "uses_bovaer": "yes"
+  },
+  {
+    "code": "M281",
+    "name": "TINE SA AVD VIK I SOGN",
+    "address": "Sentrumsgata 50",
+    "place": "VIK I SOGN",
+    "uses_bovaer": "yes"
+  },
+  {
+    "code": "M105",
+    "name": "TINE SA AVD SELBU",
+    "address": "Selbuvegen 1234",
+    "place": "SELBU",
+    "uses_bovaer": "yes"
+  },
+  {
+    "code": "1600",
+    "name": "Jan Haslemo",
+    "address": "Aurdalsvegen 134",
+    "place": "ØVRE VATS",
+    "uses_bovaer": "unknown"
+  },
+  {
+    "code": "1670",
+    "name": "INGER-ANNE HØGSETH",
+    "address": "Nesnaveien 832",
+    "place": "UTSKARPEN",
+    "uses_bovaer": "unknown"
+  },
+  {
+    "code": "M321",
+    "name": "TINE SA AVD VERDAL",
+    "address": "Melkevegen 1",
+    "place": "VERDAL",
+    "uses_bovaer": "yes"
+  },
+  {
+    "code": "M565",
+    "name": "MUNKEBY MARIAKLOSTER",
+    "address": "Munkebyvegen 310",
+    "place": "LEVANGER",
+    "uses_bovaer": "unknown"
+  },
+  {
+    "code": "M275",
+    "name": "TINE SA AVD BYRKJELO",
+    "address": "Meierivegen 1",
+    "place": "BYRKJELO",
+    "uses_bovaer": "yes"
+  },
+  {
+    "code": "2541",
+    "name": "BEIARMAT AS",
+    "address": "Vestre Beiarveien 1042",
+    "place": "TOLLÅ",
+    "uses_bovaer": "unknown"
+  },
+  {
+    "code": "2931",
+    "name": "MORTEN RISTO",
+    "address": "Straumfjord øst 1031",
+    "place": "STORSLETT",
+    "uses_bovaer": "unknown"
+  },
+  {
+    "code": "1291",
+    "name": "NORMILK AS",
+    "address": "Sjøgata 4",
+    "place": "LEVANGER",
+    "uses_bovaer": "unknown"
+  },
+  {
+    "code": "M311",
+    "name": "TINE SA AVD TUNGA",
+    "address": "Bromstadvegen 68",
+    "place": "TRONDHEIM",
+    "uses_bovaer": "yes"
+  },
+  {
+    "code": "M141",
+    "name": "TINE SA AVD BRUMUNDDAL",
+    "address": "Strandsagveien 1B",
+    "place": "Brumunddal",
+    "uses_bovaer": "yes"
+  },
+  {
+    "code": "M196",
+    "name": "TINE SA AVD SEM",
+    "address": "Åskollen 2",
+    "place": "SEM",
+    "uses_bovaer": "yes"
+  },
+  {
+    "code": "M292",
+    "name": "TINE SA AVD ÅLESUND",
+    "address": "Klaus Nilsensgt 14",
+    "place": "Ålesund",
+    "uses_bovaer": "yes"
+  },
+  {
+    "code": "M220",
+    "name": "TINE SA AVD JÆREN",
+    "address": "Næringsvegen",
+    "place": "NÆRBØ",
+    "uses_bovaer": "yes"
+  },
+  {
+    "code": "1599",
+    "name": "Q-MEIERIENE AS AVD GAUSDALSMEIERIET",
+    "address": "Østringsvegen 2",
+    "place": "ØSTRE GAUSDAL",
+    "uses_bovaer": "yes"
+  },
+  {
+    "code": "M413",
+    "name": "ALMGARD IS AS",
+    "address": "Sambindingsvegen 22",
+    "place": "FEIOS",
+    "uses_bovaer": "unknown"
+  },
+  {
+    "code": "2674",
+    "name": "Joar Hauge",
+    "address": "Fistervegen 120",
+    "place": "FISTER",
+    "uses_bovaer": "unknown"
+  },
+  {
+    "code": "2733",
+    "name": "Jerseymeieriet",
+    "address": "Herigstadvegen 110",
+    "place": "BRYNE",
+    "uses_bovaer": "no"
+  },
+  {
+    "code": "M141",
+    "name": "TINE SA AVD BRUMUNDDAL",
+    "address": "Strandsagveien 1B",
+    "place": "Brumunddal",
+    "uses_bovaer": "yes"
+  },
+  {
+    "code": "2918",
+    "name": "EINAR LIE",
+    "address": "Liavegen 9",
+    "place": "AURLAND",
+    "uses_bovaer": "unknown"
+  },
+  {
+    "code": "M902",
+    "name": "O KAVLI AS",
+    "address": "Sandbrekkevegen 91",
+    "place": "NESTTUN",
+    "uses_bovaer": "unknown"
+  },
+  {
+    "code": "M501",
+    "name": "HALVARD ONSTEIN",
+    "address": "Bygdinvegen 1892",
+    "place": "ROGNE",
+    "uses_bovaer": "unknown"
+  },
+  {
+    "code": "1516",
+    "name": "LOFOTEN GÅRDSYSTERI",
+    "address": "Saupstadveien 235",
+    "place": "BØSTAD",
+    "uses_bovaer": "unknown"
+  },
+  {
+    "code": "M220",
+    "name": "TINE SA AVD JÆREN",
+    "address": "Næringsvegen",
+    "place": "NÆRBØ",
+    "uses_bovaer": "yes"
+  },
+  {
+    "code": "1651",
+    "name": "OLUF LORENTZEN AS",
+    "address": "Toveien 22",
+    "place": "VESTBY",
+    "uses_bovaer": "unknown"
+  },
+  {
+    "code": "2008",
+    "name": "GAMMEL ERIK AS",
+    "address": "Namsskoganveien 14",
+    "place": "NAMSSKOGAN",
+    "uses_bovaer": "unknown"
+  },
+  {
+    "code": "2576",
+    "name": "SOLLIAYSTERIET SA",
+    "address": "Solliaveien 817",
+    "place": "SOLLIA",
+    "uses_bovaer": "unknown"
+  },
+  {
+    "code": "2673",
+    "name": "WINTHER AKER BRYGGE AS",
+    "address": "Grundingen 3",
+    "place": "OSLO",
+    "uses_bovaer": "unknown"
+  },
+  {
+    "code": "1670",
+    "name": "INGER-ANNE HØGSETH",
+    "address": "Nesnaveien 832",
+    "place": "UTSKARPEN",
+    "uses_bovaer": "unknown"
+  },
+  {
+    "code": "1650",
+    "name": "GANGSTAD GÅRDSYSTERI AS",
+    "address": "Nessetvegen 11",
+    "place": "INDERØY",
+    "uses_bovaer": "no"
+  },
+  {
+    "code": "M350",
+    "name": "TINE SA AVD HARSTAD",
+    "address": "Skogveien 18",
+    "place": "HARSTAD",
+    "uses_bovaer": "yes"
+  },
+  {
+    "code": "M115",
+    "name": "TINE SA AVD ALTA",
+    "address": "Meieriveien 5",
+    "place": "ALTA",
+    "uses_bovaer": "yes"
+  },
+  {
+    "code": "1927",
+    "name": "DERINNGARDEN",
+    "address": "Halåsen",
+    "place": "EIDE",
+    "uses_bovaer": "unknown"
+  },
+  {
+    "code": "M524",
+    "name": "FJELLESTAD EGIL",
+    "address": "FJELLESTAD",
+    "place": "SANDANE",
+    "uses_bovaer": "unknown"
+  },
+  {
+    "code": "2405",
+    "name": "TINE SA AVD BERGEN",
+    "address": "Espehaugen 18",
+    "place": "BLOMSTERDALEN",
+    "uses_bovaer": "yes"
+  },
+  {
+    "code": "1463",
+    "name": "LEGA OST OG BAKST AS",
+    "address": "Linutvegen 2",
+    "place": "RAULAND",
+    "uses_bovaer": "unknown"
+  },
+  {
+    "code": "2793",
+    "name": "VESTLAND FYLKESKOMMUNE OPPLÆRING OG KOMPETANSE",
+    "address": "Skulevegen 24",
+    "place": "AURLAND",
+    "uses_bovaer": "unknown"
+  },
+  {
+    "code": "M548",
+    "name": "MONSSVEEN GAARD",
+    "address": "Monssveen Gard",
+    "place": "BRØTTUM",
+    "uses_bovaer": "unknown"
+  },
+  {
+    "code": "1340",
+    "name": "HIMMELSPANNET AS",
+    "address": "Rampa",
+    "place": "HEMSEDAL",
+    "uses_bovaer": "unknown"
+  },
+  {
+    "code": "M517",
+    "name": "EGGEN GARDSYSTERI AS",
+    "address": "c/o Marius Eggen",
+    "place": "VINGELEN",
+    "uses_bovaer": "no"
+  },
+  {
+    "code": "M528",
+    "name": "SÆTERSTAD GÅRD AS",
+    "address": "Sæterstad",
+    "place": "HATTFJELLDAL",
+    "uses_bovaer": "unknown"
+  },
+  {
+    "code": "M512",
+    "name": "Gram Gardsysteri",
+    "address": "Dalen 318",
+    "place": "BORGUND",
+    "uses_bovaer": "unknown"
+  },
+  {
+    "code": "1568",
+    "name": "IVAR ØVERLI",
+    "address": "Nyrudveien 752",
+    "place": "PASVIK",
+    "uses_bovaer": "unknown"
+  },
+  {
+    "code": "1507",
+    "name": "AALAN GÅRD KNUT ÅLAND",
+    "address": "Lauvdalen 186",
+    "place": "BØSTAD",
+    "uses_bovaer": "unknown"
+  },
+  {
+    "code": "2375",
+    "name": "FJORD ENGROS AS",
+    "address": "Undredalsvegen 137",
+    "place": "UNDREDAL",
+    "uses_bovaer": "unknown"
+  },
+  {
+    "code": "2734",
+    "name": "BAMA INDUSTRI AS AVD SALATER",
+    "address": "Joseph Kellers vei 22",
+    "place": "TRANBY",
+    "uses_bovaer": "unknown"
+  },
+  {
+    "code": "1867",
+    "name": "THORBJØRNRUD YSTERI AS",
+    "address": "Vienlinna 427",
+    "place": "GRAN",
+    "uses_bovaer": "unknown"
+  },
+  {
+    "code": "M550",
+    "name": "HANS BRIMI",
+    "address": "Ottadalsvegen 4952",
+    "place": "GARMO",
+    "uses_bovaer": "unknown"
+  },
+  {
+    "code": "M344",
+    "name": "TINE SA AVD SØMNA",
+    "address": "Saltnesodden 3",
+    "place": "SØMNA",
+    "uses_bovaer": "yes"
+  },
+  {
+    "code": "M702",
+    "name": "AVDEM GARDSYSTERI AS",
+    "address": "2665 LESJA",
+    "place": "",
+    "uses_bovaer": "unknown"
+  },
+  {
+    "code": "M123",
+    "name": "TINE SA AVD KALBAKKEN",
+    "address": "Bedriftsveien 7",
+    "place": "OSLO",
+    "uses_bovaer": "yes"
+  },
+  {
+    "code": "M906",
+    "name": "ELOPAK ASA AVD SPIKKESTAD",
+    "address": "Industriveien 30",
+    "place": "SPIKKESTAD",
+    "uses_bovaer": "unknown"
+  },
+  {
+    "code": "2966",
+    "name": "VALMSNES GÅRD JONAS RUUD-LUND",
+    "address": "Valmen 54",
+    "place": "OSEN",
+    "uses_bovaer": "no"
+  },
+  {
+    "code": "2957",
+    "name": "RYGGE MEIERI AS",
+    "address": "Stasjonsveien 2",
+    "place": "RYGGE",
+    "uses_bovaer": "no"
+  },
+  {
+    "code": "M109",
+    "name": "TINE SA AVD KLEPP",
+    "address": "Lalandsvegen 1",
+    "place": "KLEPP STASJON",
+    "uses_bovaer": "yes"
+  },
+  {
+    "code": "1923",
+    "name": "JARLE RUESLÅTTEN PAULSEN",
+    "address": "Liavegen 16",
+    "place": "HOL",
+    "uses_bovaer": "unknown"
+  },
+  {
+    "code": "2398",
+    "name": "BAMA INDUSTRIER AS, AVD. VEGETABILER",
+    "address": "Fruktveien 7",
+    "place": "LIER",
+    "uses_bovaer": "unknown"
+  },
+  {
+    "code": "M521",
+    "name": "INGVAR TYSVÆR",
+    "address": "Tysværvågvegen 462",
+    "place": "TYSVÆRVÅG",
+    "uses_bovaer": "unknown"
+  },
+  {
+    "code": "M904",
+    "name": "SYNNØVE FINDEN AS AVD ALVDAL",
+    "address": "Grindegga",
+    "place": "ALVDAL",
+    "uses_bovaer": "yes"
+  },
+  {
+    "code": "2669",
+    "name": "HARDANGER BYGDEYSTERI AS",
+    "address": "Sjusetevegen 14",
+    "place": "ØYSTESE",
+    "uses_bovaer": "unknown"
+  },
+  {
+    "code": "M413",
+    "name": "ALMGARD IS AS",
+    "address": "Sambindingsvegen 22",
+    "place": "FEIOS",
+    "uses_bovaer": "unknown"
+  },
+  {
+    "code": "1723",
+    "name": "BAMSRUDLÅVEN AS",
+    "address": "Bamsrudveien 57",
+    "place": "MYSEN",
+    "uses_bovaer": "unknown"
+  },
+  {
+    "code": "M524",
+    "name": "FJELLESTAD EGIL",
+    "address": "FJELLESTAD",
+    "place": "SANDANE",
+    "uses_bovaer": "unknown"
+  },
+  {
+    "code": "2507",
+    "name": "SNERTINGDAL YSTERI DRIFT AS",
+    "address": "Vest-Torpvegen 321",
+    "place": "DOKKA",
+    "uses_bovaer": "unknown"
+  },
+  {
+    "code": "1923",
+    "name": "JARLE RUESLÅTTEN PAULSEN",
+    "address": "Liavegen 16",
+    "place": "HOL",
+    "uses_bovaer": "unknown"
+  },
+  {
+    "code": "1788",
+    "name": "TJAMSLAND GÅRD MARTINSEN",
+    "address": "Tjamsland",
+    "place": "Birkeland",
+    "uses_bovaer": "no"
+  },
+  {
+    "code": "M920",
+    "name": "LARS KRISTIAN GRØNDAHL",
+    "address": "Grøndalsvegen 19",
+    "place": "AULI",
+    "uses_bovaer": "unknown"
+  },
+  {
+    "code": "M308",
+    "name": "RØROSMEIERIET AS",
+    "address": "Sollihagaen 2",
+    "place": "RØROS",
+    "uses_bovaer": "no"
+  },
+  {
+    "code": "2467",
+    "name": "ÅMLI GÅRDSMEIERI",
+    "address": "Gjermundnes 40",
+    "place": "ÅMLI",
+    "uses_bovaer": "unknown"
+  },
+  {
+    "code": "2399",
+    "name": "STORFJORD ISKREM AS",
+    "address": "Sandvikgata 30",
+    "place": "Storfjord",
+    "uses_bovaer": "unknown"
+  },
+  {
+    "code": "1503",
+    "name": "Q-MEIERIENE AS AVD JÆREN GÅRDSMEIERI",
+    "address": "Bedriftsvegen 21",
+    "place": "KLEPP STASJON",
+    "uses_bovaer": "yes"
+  },
+  {
+    "code": "2939",
+    "name": "TODDUM GÅRDSYSTERI AS",
+    "address": "Gullvikvegen 193",
+    "place": "NAMSOS",
+    "uses_bovaer": "unknown"
+  },
+  {
+    "code": "2968",
+    "name": "Håvard Tveit",
+    "address": "Ortneset 17",
+    "place": "BREKKE",
+    "uses_bovaer": "unknown"
+  },
+  {
+    "code": "M286",
+    "name": "TINE SA AVD ELNESVÅGEN",
+    "address": "Sjøvegen 4",
+    "place": "ELNESVÅGEN",
+    "uses_bovaer": "yes"
+  },
+  {
+    "code": "M202",
+    "name": "TINE SA AVD HAUKELI",
+    "address": "Storegutvegen 165",
+    "place": "EDLAND",
+    "uses_bovaer": "yes"
+  },
+  {
+    "code": "M913",
+    "name": "SYNNØVE FINDEN AS AVD NAMSOS",
+    "address": "Hyllavegen 2",
+    "place": "NAMSOS",
+    "uses_bovaer": "yes"
+  },
+  {
+    "code": "1830",
+    "name": "GRINDAL YSTERI AS",
+    "address": "Orkdalsveien 2181",
+    "place": "RENNEBU",
+    "uses_bovaer": "no"
+  },
+  {
+    "code": "2400",
+    "name": "ROMSTAD GÅRD AS",
+    "address": "Furunesveien 396",
+    "place": "BJUGN",
+    "uses_bovaer": "unknown"
+  },
+  {
+    "code": "1291",
+    "name": "NORMILK AS",
+    "address": "Sjøgata 4",
+    "place": "LEVANGER",
+    "uses_bovaer": "unknown"
+  },
+  {
+    "code": "M321",
+    "name": "TINE SA AVD VERDAL",
+    "address": "Melkevegen 1",
+    "place": "VERDAL",
+    "uses_bovaer": "yes"
+  },
+  {
+    "code": "2703",
+    "name": "RONDANE PRODUKSJON AS",
+    "address": "Ulavegen 3",
+    "place": "OTTA",
+    "uses_bovaer": "unknown"
+  },
+  {
+    "code": "M311",
+    "name": "TINE SA AVD TUNGA",
+    "address": "Bromstadvegen 68",
+    "place": "TRONDHEIM",
+    "uses_bovaer": "yes"
+  },
+  {
+    "code": "M415",
+    "name": "OLE MORTEN HØILAND",
+    "address": "Vadlandsvegen 125",
+    "place": "VIGRESTAD",
+    "uses_bovaer": "unknown"
+  },
+  {
+    "code": "M506",
+    "name": "HEIDAL YSTERI",
+    "address": "Ysterivegen 2 B",
+    "place": "HEIDAL",
+    "uses_bovaer": "unknown"
+  },
+  {
+    "code": "2733",
+    "name": "Jerseymeieriet",
+    "address": "Herigstadvegen 110",
+    "place": "BRYNE",
+    "uses_bovaer": "no"
+  },
+  {
+    "code": "1528",
+    "name": "TINGVOLLOST AS",
+    "address": "Vågagrenda 85",
+    "place": "TORJULVÅGEN",
+    "uses_bovaer": "unknown"
+  },
+  {
+    "code": "M216",
+    "name": "TINE SA AVD SETESDAL",
+    "address": "Setesdalsvegen 2019",
+    "place": "BYGLANDSFJORD",
+    "uses_bovaer": "yes"
+  },
+  {
+    "code": "M361",
+    "name": "TINE SA AVD TANA",
+    "address": "Grenveien",
+    "place": "Tana",
+    "uses_bovaer": "yes"
+  },
+  {
+    "code": "1576",
+    "name": "STEIN BRUBÆK",
+    "address": "Brakstadstranda 345",
+    "place": "ANGVIK",
+    "uses_bovaer": "unknown"
+  },
+  {
+    "code": "M534",
+    "name": "BRYN GARDSMEIERI",
+    "address": "Flendalsvegen 2699",
+    "place": "TRYSIL",
+    "uses_bovaer": "unknown"
+  },
+  {
+    "code": "M174",
+    "name": "TINE SA AVD TRETTEN",
+    "address": "Musdalsvegen 34",
+    "place": "TRETTEN",
+    "uses_bovaer": "yes"
+  },
+  {
+    "code": "M169",
+    "name": "TINE SA AVD FRYA",
+    "address": "Fryavegen 64",
+    "place": "RINGEBU",
+    "uses_bovaer": "yes"
+  },
+  {
+    "code": "M297",
+    "name": "TINE SA AVD TRESFJORD",
+    "address": "Sylteøyran 3",
+    "place": "TRESFJORD",
+    "uses_bovaer": "yes"
+  },
+  {
+    "code": "M299",
+    "name": "TINE SA AVD ØRSTA",
+    "address": "Voldavegen 2",
+    "place": "ØRSTA",
+    "uses_bovaer": "yes"
+  },
+  {
+    "code": "2355",
+    "name": "REIDAR STENBERG",
+    "address": "Nerolsgutu 7",
+    "place": "HOL",
+    "uses_bovaer": "unknown"
+  },
+  {
+    "code": "M519",
+    "name": "VOLL YSTERI",
+    "address": "Ysterivegen 8A",
+    "place": "VOLL",
+    "uses_bovaer": "unknown"
+  },
+  {
+    "code": "1867",
+    "name": "THORBJØRNRUD YSTERI AS",
+    "address": "Vienlinna 427",
+    "place": "GRAN",
+    "uses_bovaer": "unknown"
+  },
+  {
+    "code": "1867",
+    "name": "THORBJØRNRUD YSTERI AS",
+    "address": "Vienlinna 427",
+    "place": "GRAN",
+    "uses_bovaer": "unknown"
+  },
+  {
+    "code": "2831",
+    "name": "MAYAH PRODUKTER AS",
+    "address": "Fabritiusvegen 2",
+    "place": "LEVANGER",
+    "uses_bovaer": "unknown"
+  },
+  {
+    "code": "M526",
+    "name": "MYRDAL GÅRD VAN SCHAIK",
+    "address": "Myrdalsvegen 202",
+    "place": "LUNDEGREND",
+    "uses_bovaer": "unknown"
+  },
+  {
+    "code": "M533",
+    "name": "GALÅVOLDEN GÅRD AS",
+    "address": "Galåvollveien 108",
+    "place": "RØROS",
+    "uses_bovaer": "no"
+  },
+  {
+    "code": "M415",
+    "name": "OLE MORTEN HØILAND",
+    "address": "Vadlandsvegen 125",
+    "place": "VIGRESTAD",
+    "uses_bovaer": "unknown"
+  },
+  {
+    "code": "M558",
+    "name": "ART NOR AS",
+    "address": "Naustveien 17",
+    "place": "SILSAND",
+    "uses_bovaer": "unknown"
+  },
+  {
+    "code": "1810",
+    "name": "JENSEN AUD TORHILD",
+    "address": "Jeraldsvegen 57",
+    "place": "VOSS",
+    "uses_bovaer": "unknown"
+  },
+  {
+    "code": "M299",
+    "name": "TINE SA AVD ØRSTA",
+    "address": "Voldavegen 2",
+    "place": "ØRSTA",
+    "uses_bovaer": "yes"
+  },
+  {
+    "code": "2488",
+    "name": "SONDRE AASAN",
+    "address": "Flatdalsvegen 576",
+    "place": "FLATDAL",
+    "uses_bovaer": "unknown"
+  },
+  {
+    "code": "M106",
+    "name": "TINE SA AVD HEIMDAL",
+    "address": "Heggstadmyra 19",
+    "place": "HEIMDAL",
+    "uses_bovaer": "yes"
+  },
+  {
+    "code": "M151",
+    "name": "TINE SA AVD DOVRE",
+    "address": "Stasjonsvegen 10",
+    "place": "DOVRE",
+    "uses_bovaer": "yes"
+  },
+  {
+    "code": "M164",
+    "name": "TINE SA AVD LOM & SKJÅK",
+    "address": "Skjåkvegen 8",
+    "place": "SKJÅK",
+    "uses_bovaer": "yes"
+  },
+  {
+    "code": "M147",
+    "name": "TINE SA AVD TRYSIL",
+    "address": "Parkvegen 8",
+    "place": "NYBERGSUND",
+    "uses_bovaer": "yes"
+  },
+  {
+    "code": "M 527",
+    "name": "BOMSTAD GÅRD ANS",
+    "address": "Øvergårdveien 170",
+    "place": "NORDKJOSBOTN",
+    "uses_bovaer": "unknown"
+  },
+  {
+    "code": "M105",
+    "name": "TINE SA AVD SELBU",
+    "address": "Selbuvegen 1234",
+    "place": "SELBU",
+    "uses_bovaer": "yes"
+  },
+  {
+    "code": "1599",
+    "name": "Q-MEIERIENE AS AVD GAUSDALSMEIERIET",
+    "address": "Østringsvegen 2",
+    "place": "ØSTRE GAUSDAL",
+    "uses_bovaer": "yes"
+  },
+  {
+    "code": "2439",
+    "name": "YSTEPIKENE AS",
+    "address": "Skrettinglandsvegen 50",
+    "place": "VARHAUG",
+    "uses_bovaer": "unknown"
+  },
+  {
+    "code": "M551",
+    "name": "HITRA GÅRDSMAT -MONA NYNES",
+    "address": "Helgebustadveien 66",
+    "place": "KVENVÆR",
+    "uses_bovaer": "no"
+  },
+  {
+    "code": "M348",
+    "name": "Tine SA avd. Storsteinnes",
+    "address": "Meieriveien 9",
+    "place": "STORSTEINNES",
+    "uses_bovaer": "yes"
+  },
+  {
+    "code": "M515",
+    "name": "BEATE FLUGHEIM NESET",
+    "address": "Veitastrondsvegen 2445",
+    "place": "VEITASTROND",
+    "uses_bovaer": "unknown"
+  },
+  {
+    "code": "M557",
+    "name": "ORKLADAL YSTERI AS",
+    "address": "c/o Merethe Landrø",
+    "place": "GJØLME",
+    "uses_bovaer": "unknown"
+  },
+  {
+    "code": "2481",
+    "name": "TVERÅS GÅRDSMAT AS",
+    "address": "Tveråsvegen 23",
+    "place": "MALM",
+    "uses_bovaer": "unknown"
+  },
+  {
+    "code": "1888",
+    "name": "DEN SORTE GRYTE",
+    "address": "Vågehamn",
+    "place": "VESTBYGD",
+    "uses_bovaer": "unknown"
+  },
+  {
+    "code": "M417",
+    "name": "VEMUND SKAFSÅ BJØRGE",
+    "address": "Manheimstrondi 10",
+    "place": "SELJORD",
+    "uses_bovaer": "unknown"
+  },
+  {
+    "code": "M530",
+    "name": "EIKER GÅRDSYSTERI AS",
+    "address": "Bermingrudveien",
+    "place": "HOKKSUND",
+    "uses_bovaer": "no"
+  },
+  {
+    "code": "M308",
+    "name": "RØROSMEIERIET AS",
+    "address": "Sollihagaen 2",
+    "place": "RØROS",
+    "uses_bovaer": "no"
+  },
+  {
+    "code": "M417",
+    "name": "VEMUND SKAFSÅ BJØRGE",
+    "address": "Manheimstrondi 10",
+    "place": "SELJORD",
+    "uses_bovaer": "unknown"
+  },
+  {
+    "code": "1830",
+    "name": "GRINDAL YSTERI AS",
+    "address": "Orkdalsveien 2181",
+    "place": "RENNEBU",
+    "uses_bovaer": "no"
+  },
+  {
+    "code": "1402",
+    "name": "Elvebakken Gardsysteri",
+    "address": "6878 VEITASTROND",
+    "place": "",
+    "uses_bovaer": "unknown"
+  },
+  {
+    "code": "M507",
+    "name": "UNDREDAL STØLSYSTERI SA",
+    "address": "Undredal",
+    "place": "Undredal",
+    "uses_bovaer": "unknown"
+  },
+  {
+    "code": "M344",
+    "name": "TINE SA AVD SØMNA",
+    "address": "Saltnesodden 3",
+    "place": "SØMNA",
+    "uses_bovaer": "yes"
+  },
+  {
+    "code": "1466",
+    "name": "VALDRESMEIERIET AS",
+    "address": "Fosheimvegen 66",
+    "place": "RØN",
+    "uses_bovaer": "unknown"
+  },
+  {
+    "code": "1746",
+    "name": "Andrea Maggioni",
+    "address": "Steindalsveien 90",
+    "place": "LILLESAND",
+    "uses_bovaer": "unknown"
+  },
+  {
+    "code": "1830",
+    "name": "GRINDAL YSTERI AS",
+    "address": "Orkdalsveien 2181",
+    "place": "RENNEBU",
+    "uses_bovaer": "no"
+  },
+  {
+    "code": "M111",
+    "name": "TINE SA AVD SANDNESSJØEN",
+    "address": "Alstenveien 51",
+    "place": "SANDNESSJØEN",
+    "uses_bovaer": "yes"
+  },
+  {
+    "code": "1437",
+    "name": "ALIMENTA AS AVD ENGROSHANDEL",
+    "address": "Jeksleveien 2",
+    "place": "FROGNER",
+    "uses_bovaer": "unknown"
+  }
+]

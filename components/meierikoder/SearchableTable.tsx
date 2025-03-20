@@ -43,7 +43,7 @@ export function SearchableTable({ dairyCodes }: { dairyCodes: DairyCode[] }) {
   };
 
   return (
-    <>
+    <div className="flex flex-col">
       <div className="mb-4">
         <input
           type="text"
@@ -57,86 +57,98 @@ export function SearchableTable({ dairyCodes }: { dairyCodes: DairyCode[] }) {
         />
       </div>
 
-      <div className="overflow-x-auto rounded-lg shadow-md">
-        <table className="min-w-full table-fixed bg-card text-card-foreground">
-          <colgroup>
-            <col className="w-6" />
-            <col className="w-[15%]" />
-            <col className="w-[40%]" />
-            <col className="w-[20%]" />
-            <col className="w-[25%]" />
-          </colgroup>
-          <thead>
-            <tr className="border-b border-border bg-muted">
-              <th className="w-6"></th>
-              <th className="px-4 py-3 text-left font-medium">Kode</th>
-              <th className="px-4 py-3 text-left font-medium">Navn</th>
-              <th className="px-4 py-3 text-left font-medium">Sted</th>
-              <th className="px-4 py-3 text-left font-medium">Adresse</th>
-            </tr>
-          </thead>
-          <tbody>
-            {currentItems.map((dairyCode: DairyCode) => {
-              // Determine row styling based on uses_bovaer status
-              let rowClass = "";
-              let indicatorClass = "";
+      {/* Table container with horizontal scroll */}
+      <div className="mb-14 shadow-md">
+        <div className="overflow-x-auto rounded-lg">
+          <table className="min-w-full table-fixed rounded-lg bg-card text-card-foreground">
+            <colgroup>
+              <col className="w-6" />
+              <col className="w-[15%]" />
+              <col className="w-[40%]" />
+              <col className="w-[20%]" />
+              <col className="w-[25%]" />
+            </colgroup>
+            <thead>
+              <tr className="border-b border-border bg-muted">
+                <th className="w-6 rounded-tl-lg"></th>
+                <th className="px-4 py-3 text-left font-medium">Kode</th>
+                <th className="px-4 py-3 text-left font-medium">Navn</th>
+                <th className="px-4 py-3 text-left font-medium">Sted</th>
+                <th className="rounded-tr-lg px-4 py-3 text-left font-medium">Adresse</th>
+              </tr>
+            </thead>
+            <tbody>
+              {currentItems.map((dairyCode: DairyCode, index) => {
+                // Determine row styling based on uses_bovaer status
+                let rowClass = "";
+                let indicatorClass = "";
 
-              if (dairyCode.uses_bovaer === "no") {
-                rowClass = "bg-green-100 dark:bg-green-900/40";
-                indicatorClass = "bg-green-500 dark:bg-green-400";
-              } else if (dairyCode.uses_bovaer === "yes") {
-                rowClass = "bg-red-100 dark:bg-red-900/40";
-                indicatorClass = "bg-red-500 dark:bg-red-400";
-              } else if (dairyCode.uses_bovaer === "soon") {
-                rowClass = "bg-yellow-100 dark:bg-yellow-900/40";
-                indicatorClass = "bg-yellow-500 dark:bg-yellow-400";
-              } else {
-                // For unknown status
-                rowClass = "bg-gray-50 dark:bg-gray-800/40";
-                indicatorClass = "bg-gray-400 dark:bg-gray-500";
-              }
+                if (dairyCode.uses_bovaer === "no") {
+                  rowClass = "bg-green-100 dark:bg-green-900/40";
+                  indicatorClass = "bg-green-500 dark:bg-green-400";
+                } else if (dairyCode.uses_bovaer === "yes") {
+                  rowClass = "bg-red-100 dark:bg-red-900/40";
+                  indicatorClass = "bg-red-500 dark:bg-red-400";
+                } else if (dairyCode.uses_bovaer === "soon") {
+                  rowClass = "bg-yellow-100 dark:bg-yellow-900/40";
+                  indicatorClass = "bg-yellow-500 dark:bg-yellow-400";
+                } else {
+                  // For unknown status
+                  rowClass = "bg-gray-50 dark:bg-gray-800/40";
+                  indicatorClass = "bg-gray-400 dark:bg-gray-500";
+                }
 
-              return (
-                <tr
-                  key={dairyCode.id}
-                  className={`border-b border-border ${rowClass} transition duration-150`}
-                >
-                  <td className={`${indicatorClass} w-6`}></td>
-                  <td className="px-4 py-3">{dairyCode.code}</td>
-                  <td className="px-4 py-3 font-medium">{dairyCode.name}</td>
-                  <td className="px-4 py-3">{titleCase(dairyCode.place)}</td>
-                  <td className="px-4 py-3">{dairyCode.address}</td>
-                </tr>
-              );
-            })}
-          </tbody>
-        </table>
+                // Add rounded corners to the last row
+                const isLastRow = index === currentItems.length - 1;
+                const lastRowClass = isLastRow ? "border-0" : "border-b border-border";
+                const lastRowLeftCorner = isLastRow ? "rounded-bl-lg" : "";
+                const lastRowRightCorner = isLastRow ? "rounded-br-lg" : "";
 
+                return (
+                  <tr
+                    key={dairyCode.id}
+                    className={`${lastRowClass} ${rowClass} transition duration-150`}
+                  >
+                    <td className={`${indicatorClass} w-6 ${lastRowLeftCorner}`}></td>
+                    <td className="px-4 py-3">{dairyCode.code}</td>
+                    <td className="px-4 py-3 font-medium">{dairyCode.name}</td>
+                    <td className="px-4 py-3">{titleCase(dairyCode.place)}</td>
+                    <td className={`px-4 py-3 ${lastRowRightCorner}`}>{dairyCode.address}</td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
+
+        {/* Fixed pagination controls */}
         {filteredDairyCodes.length > itemsPerPage && (
-          <div className="flex items-center justify-between bg-muted px-4 py-3 text-sm text-muted-foreground">
-            <div>
-              Viser {startIndex + 1}-{Math.min(endIndex, filteredDairyCodes.length)} av{" "}
-              {filteredDairyCodes.length} resultater
-            </div>
-            <div className="flex gap-2">
-              <button
-                onClick={goToPrevPage}
-                disabled={currentPage === 1}
-                className="rounded border border-border px-3 py-1 disabled:opacity-50"
-              >
-                Forrige
-              </button>
-              <button
-                onClick={goToNextPage}
-                disabled={currentPage === totalPages}
-                className="rounded border border-border px-3 py-1 disabled:opacity-50"
-              >
-                Neste
-              </button>
+          <div className="mt-4 rounded-lg bg-muted px-4 py-3 text-sm text-muted-foreground">
+            <div className="flex flex-wrap items-center justify-between gap-2">
+              <div>
+                Viser {startIndex + 1}-{Math.min(endIndex, filteredDairyCodes.length)} av{" "}
+                {filteredDairyCodes.length} resultater
+              </div>
+              <div className="flex gap-2">
+                <button
+                  onClick={goToPrevPage}
+                  disabled={currentPage === 1}
+                  className="min-w-[80px] rounded border border-border px-3 py-1 disabled:opacity-50"
+                >
+                  Forrige
+                </button>
+                <button
+                  onClick={goToNextPage}
+                  disabled={currentPage === totalPages}
+                  className="min-w-[80px] rounded border border-border px-3 py-1 disabled:opacity-50"
+                >
+                  Neste
+                </button>
+              </div>
             </div>
           </div>
         )}
       </div>
-    </>
+    </div>
   );
 }
