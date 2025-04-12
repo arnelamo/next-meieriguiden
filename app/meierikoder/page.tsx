@@ -44,9 +44,9 @@ export default async function Meierikoder() {
         <Text type="h3">Meierikoder</Text>
         <Dialog>
           <DialogTrigger asChild>
-            <Button variant="outline" size="sm" className="bg-sky-50">
+            <Button variant="outline" size="sm">
               <Info size={16} />
-              Hva er meierikoder?
+              <Text type="small">Hva er meierikoder?</Text>
             </Button>
           </DialogTrigger>
           <DialogContent className="sm:max-w-md">
