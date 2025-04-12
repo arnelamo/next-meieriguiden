@@ -76,7 +76,7 @@ const typeStylesLookup: Record<TextType, string> = {
  * @returns {JSX.Element} Styled text component
  */
 export const Text: React.FC<TextProps> = ({
-  tag = null,
+  tag = "p",
   className,
   type = "normal",
   children,

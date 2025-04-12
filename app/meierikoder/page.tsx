@@ -54,7 +54,7 @@ export default async function Meierikoder() {
               <DialogTitle className="hidden">Slik bruker du tabellen</DialogTitle>
               <DialogDescription>Slik bruker du tabellen</DialogDescription>
             </DialogHeader>
-            <div className="flex flex-col space-y-6">
+            <div className="flex flex-col space-y-8">
               <div className="flex flex-col space-y-2">
                 <Text type="h4">Meierikoder</Text>
                 <Text type="normal">
@@ -91,26 +91,26 @@ export default async function Meierikoder() {
                 <div className="mb-6">
                   <div className="grid grid-cols-2 gap-2">
                     <div className="w-full">
-                      <div className="border-l-[6px] border-l-green-500 bg-green-100 px-3 py-1.5 text-sm dark:border-l-green-400 dark:bg-green-900/40 dark:text-green-100">
-                        Bruker ikke Bovaer
+                      <div className="border-l-[6px] border-l-green-500 bg-green-100 px-2 py-1.5 dark:border-l-green-400 dark:bg-green-900/40 dark:text-green-100">
+                        <Text type="small">Bruker ikke Bovaer</Text>
                       </div>
                     </div>
 
                     <div className="w-full">
-                      <div className="border-l-[6px] border-l-yellow-500 bg-yellow-100 px-3 py-1.5 text-sm dark:border-l-yellow-400 dark:bg-yellow-900/40 dark:text-yellow-100">
-                        Vil snart bruke Bovaer
+                      <div className="border-l-[6px] border-l-yellow-500 bg-yellow-100 px-2 py-1.5 dark:border-l-yellow-400 dark:bg-yellow-900/40 dark:text-yellow-100">
+                        <Text type="small">Vil snart bruke Bovaer</Text>
                       </div>
                     </div>
 
                     <div className="w-full">
-                      <div className="border-l-[6px] border-l-red-500 bg-red-100 px-3 py-1.5 text-sm dark:border-l-red-400 dark:bg-red-900/40 dark:text-red-100">
-                        Bruker Bovaer
+                      <div className="border-l-[6px] border-l-red-500 bg-red-100 px-2 py-1.5 dark:border-l-red-400 dark:bg-red-900/40 dark:text-red-100">
+                        <Text type="small">Bruker Bovaer</Text>
                       </div>
                     </div>
 
                     <div className="w-full">
-                      <div className="border-l-[6px] border-l-gray-400 bg-gray-50 px-3 py-1.5 text-sm dark:border-l-gray-500 dark:bg-gray-800/40 dark:text-gray-300">
-                        Status ukjent
+                      <div className="border-l-[6px] border-l-gray-400 bg-gray-50 px-2 py-1.5 dark:border-l-gray-500 dark:bg-gray-800/40 dark:text-gray-300">
+                        <Text type="small">Ukjent</Text>
                       </div>
                     </div>
                   </div>

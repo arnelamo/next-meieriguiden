@@ -21,16 +21,11 @@ import {
   SelectValue,
 } from "../ui/select";
 import { CustomSearch } from "../CustomSearch";
-import { useSidebar } from "../ui/sidebar";
-import { Button } from "../ui/button";
-import { Trash2 } from "lucide-react";
-import { clear } from "console";
 
 export function MeirikoderTable({ dairyCodes }: { dairyCodes: DairyCode[] }) {
   const [searchTerm, setSearchTerm] = useState("");
   const [bovaerFilter, setBovaerFilter] = useState<UsesBovaerStatus | "all">("all");
   const [floating, setFloating] = useState(false);
-  const { isMobile } = useSidebar();
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -88,101 +83,88 @@ export function MeirikoderTable({ dairyCodes }: { dairyCodes: DairyCode[] }) {
     }
   };
 
-  const clearFilters = () => {
-    setSearchTerm("");
-    setBovaerFilter("all");
-  };
-
   return (
-    <div className="">
-      <div className="flex flex-col">
-        <div
-          className={`duration-400 z-10 py-4 transition-all ${
-            floating
-              ? "sticky top-4 rounded-xl bg-background/60 px-4 backdrop-blur-md lg:mx-2"
-              : "bg-background"
-          }`}
-        >
-          <div className="flex space-x-4">
-            <CustomSearch
-              search={searchTerm}
-              setSearch={setSearchTerm}
-              placeholder="Søk på kode, navn, sted eller adresse"
-            />
-            <Select
-              value={bovaerFilter}
-              onValueChange={(value: UsesBovaerStatus | "all") => setBovaerFilter(value)}
-            >
-              <SelectTrigger className="w-fit max-w-[200px] grow">
-                <SelectValue placeholder="Filter på Bovaer" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectGroup>
-                  <SelectItem value="all">Alle</SelectItem>
-                  <SelectItem value="no">Ikke Bovaer</SelectItem>
-                  <SelectItem value="yes">Bruker Bovaer</SelectItem>
-                  <SelectItem value="soon">Snart Bovaer</SelectItem>
-                  <SelectItem value="unknown">Ukjent</SelectItem>
-                </SelectGroup>
-              </SelectContent>
-            </Select>
-            {/* <Button variant={isMobile ? "secondary" : "secondary"} onClick={clearFilters}>
-              <Trash2 />
-              {!isMobile && <Text type="small">Nullstill</Text>}
-            </Button> */}
+    <div className="flex flex-col">
+      <div
+        className={`duration-400 z-10 py-4 transition-all ${
+          floating
+            ? "sticky top-4 rounded-md bg-background/60 px-2 backdrop-blur-md lg:mx-2"
+            : "bg-background"
+        }`}
+      >
+        <div className="flex space-x-4">
+          <div className="grow">
+            <CustomSearch search={searchTerm} setSearch={setSearchTerm} placeholder="Søk..." />
           </div>
+          <Select
+            value={bovaerFilter}
+            onValueChange={(value: UsesBovaerStatus | "all") => setBovaerFilter(value)}
+          >
+            <SelectTrigger className="w-[160px]">
+              <SelectValue placeholder="Filter på Bovaer" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectGroup>
+                <SelectItem value="all">Alle</SelectItem>
+                <SelectItem value="no">Ikke Bovaer</SelectItem>
+                <SelectItem value="yes">Bruker Bovaer</SelectItem>
+                <SelectItem value="soon">Snart Bovaer</SelectItem>
+                <SelectItem value="unknown">Ukjent</SelectItem>
+              </SelectGroup>
+            </SelectContent>
+          </Select>
         </div>
+      </div>
 
-        <div className="overflow-hidden rounded-lg border">
-          <div className="overflow-x-auto">
-            <Table>
-              <TableHeader className="bg-muted">
-                <TableRow className="border-b border-border">
-                  <TableHead className="w-[15%] px-4 py-3 text-left font-medium">
-                    <Text type="normal">Kode</Text>
-                  </TableHead>
-                  <TableHead className="w-[40%] px-4 py-3 text-left font-medium">
-                    <Text type="normal">Navn</Text>
-                  </TableHead>
-                  <TableHead className="hidden w-[20%] px-4 py-3 text-left font-medium lg:table-cell">
-                    <Text type="normal">Sted</Text>
-                  </TableHead>
-                  <TableHead className="hidden w-[25%] rounded-tr-lg px-4 py-3 text-left font-medium lg:table-cell">
-                    <Text type="normal">Adresse</Text>
-                  </TableHead>
-                </TableRow>
-              </TableHeader>
-              <TableBody>
-                {filteredDairyCodes.map((dairyCode) => {
-                  const { rowClass, indicatorClass } = getBovaerStyles(dairyCode.uses_bovaer);
+      <div className="overflow-hidden rounded-lg border">
+        <div className="overflow-x-auto">
+          <Table>
+            <TableHeader className="bg-muted">
+              <TableRow className="border-b border-border">
+                <TableHead className="w-[15%] px-4 py-3 text-left font-medium">
+                  <Text type="normal">Kode</Text>
+                </TableHead>
+                <TableHead className="w-[40%] px-4 py-3 text-left font-medium">
+                  <Text type="normal">Navn</Text>
+                </TableHead>
+                <TableHead className="hidden w-[20%] px-4 py-3 text-left font-medium lg:table-cell">
+                  <Text type="normal">Sted</Text>
+                </TableHead>
+                <TableHead className="hidden w-[25%] rounded-tr-lg px-4 py-3 text-left font-medium lg:table-cell">
+                  <Text type="normal">Adresse</Text>
+                </TableHead>
+              </TableRow>
+            </TableHeader>
+            <TableBody>
+              {filteredDairyCodes.map((dairyCode) => {
+                const { rowClass, indicatorClass } = getBovaerStyles(dairyCode.uses_bovaer);
 
-                  return (
-                    <TableRow key={dairyCode.id} className={`${rowClass} transition duration-150`}>
-                      <TableCell className={`px-4 py-3 ${indicatorClass}`}>
-                        <Text type="normal">{dairyCode.code}</Text>
-                      </TableCell>
-                      <TableCell className="px-4 py-3 font-medium">
-                        <Text type="normal">{dairyCode.name}</Text>
-                      </TableCell>
-                      <TableCell className="hidden px-4 py-3 lg:table-cell">
-                        <Text type="normal">{titleCase(dairyCode.place)}</Text>
-                      </TableCell>
-                      <TableCell className="hidden px-4 py-3 lg:table-cell">
-                        <Text type="normal">{dairyCode.address}</Text>
-                      </TableCell>
-                    </TableRow>
-                  );
-                })}
-              </TableBody>
-              <TableFooter>
-                <TableRow>
-                  <TableCell colSpan={4} className="px-4 py-2 text-sm">
-                    {filteredDairyCodes.length} resultater
-                  </TableCell>
-                </TableRow>
-              </TableFooter>
-            </Table>
-          </div>
+                return (
+                  <TableRow key={dairyCode.id} className={`${rowClass} transition duration-150`}>
+                    <TableCell className={`px-4 py-3 ${indicatorClass}`}>
+                      <Text type="normal">{dairyCode.code}</Text>
+                    </TableCell>
+                    <TableCell className="px-4 py-3 font-medium">
+                      <Text type="normal">{dairyCode.name}</Text>
+                    </TableCell>
+                    <TableCell className="hidden px-4 py-3 lg:table-cell">
+                      <Text type="normal">{titleCase(dairyCode.place)}</Text>
+                    </TableCell>
+                    <TableCell className="hidden px-4 py-3 lg:table-cell">
+                      <Text type="normal">{dairyCode.address}</Text>
+                    </TableCell>
+                  </TableRow>
+                );
+              })}
+            </TableBody>
+            <TableFooter>
+              <TableRow>
+                <TableCell colSpan={4} className="px-4 py-2 text-sm">
+                  {filteredDairyCodes.length} resultater
+                </TableCell>
+              </TableRow>
+            </TableFooter>
+          </Table>
         </div>
       </div>
     </div>
