@@ -38,7 +38,7 @@ export function MeirikoderTable({ dairyCodes }: { dairyCodes: DairyCode[] }) {
       });
     }
   }, []);
-  console.log(isMobile);
+
   const filteredDairyCodes = dairyCodes.filter((dairyCode) => {
     const searchLower = searchTerm.toLowerCase();
     const matchesSearch =

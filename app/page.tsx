@@ -4,7 +4,7 @@ import { fetchDairies } from "@/lib/fetchers/dairies";
 
 export default async function Home() {
   const dairies = await fetchDairies();
-  console.log({ dairies });
+
   return (
     <div>
       <CardGrid>

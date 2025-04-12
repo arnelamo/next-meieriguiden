@@ -8,7 +8,7 @@ export function SearchableTable({ dairyCodes }: { dairyCodes: DairyCode[] }) {
   const [searchTerm, setSearchTerm] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 10;
-  console.log("dairyCodes", dairyCodes);
+
   const filteredDairyCodes = dairyCodes.filter((dairyCode) => {
     const searchLower = searchTerm.toLowerCase();
     return (
