@@ -21,11 +21,23 @@ import {
   SelectValue,
 } from "../ui/select";
 import { CustomSearch } from "../CustomSearch";
+import { ArrowDown, ArrowUp, ArrowUpDown } from "lucide-react";
+
+type SortKey = "code" | "name" | "place" | "address";
+type SortDirection = "asc" | "desc" | null;
+type SortConfig = {
+  key: SortKey | null;
+  direction: SortDirection;
+};
 
 export function MeirikoderTable({ dairyCodes }: { dairyCodes: DairyCode[] }) {
   const [searchTerm, setSearchTerm] = useState("");
   const [bovaerFilter, setBovaerFilter] = useState<UsesBovaerStatus | "all">("all");
   const [floating, setFloating] = useState(false);
+  const [sortConfig, setSortConfig] = useState<SortConfig>({
+    key: "code",
+    direction: "asc",
+  });
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -34,6 +46,42 @@ export function MeirikoderTable({ dairyCodes }: { dairyCodes: DairyCode[] }) {
       });
     }
   }, []);
+
+  const handleSort = (key: SortKey) => {
+    setSortConfig((current) => ({
+      key,
+      direction: current.key === key ? (current.direction === "asc" ? "desc" : "asc") : "asc",
+    }));
+  };
+
+  const getSortIcon = (key: SortKey) => {
+    if (sortConfig.key !== key) {
+      return <ArrowUpDown size={16} className="foreground/50 ml-2" />;
+    }
+    return sortConfig.direction === "asc" ? (
+      <ArrowUp size={16} className="ml-2 text-foreground/50" />
+    ) : (
+      <ArrowDown size={16} className="ml-2 text-foreground/50" />
+    );
+  };
+
+  // Sort function to sort the data
+  const sortData = (data: DairyCode[]) => {
+    if (!sortConfig.key) return data;
+
+    return [...data].sort((a, b) => {
+      const aValue = a[sortConfig.key as keyof DairyCode];
+      const bValue = b[sortConfig.key as keyof DairyCode];
+
+      // Handle string comparison (all dairy code fields are strings)
+      const aString = String(aValue).toLowerCase();
+      const bString = String(bValue).toLowerCase();
+
+      return sortConfig.direction === "asc"
+        ? aString.localeCompare(bString)
+        : bString.localeCompare(aString);
+    });
+  };
 
   const filteredDairyCodes = dairyCodes.filter((dairyCode) => {
     const searchLower = searchTerm.toLowerCase();
@@ -47,6 +95,8 @@ export function MeirikoderTable({ dairyCodes }: { dairyCodes: DairyCode[] }) {
 
     return matchesSearch && matchesBovaerFilter;
   });
+
+  const sortedDairyCodes = sortData(filteredDairyCodes);
 
   // Function to capitalize first letter of each word
   const titleCase = (str: string) => {
@@ -121,36 +171,60 @@ export function MeirikoderTable({ dairyCodes }: { dairyCodes: DairyCode[] }) {
           <Table>
             <TableHeader className="bg-muted">
               <TableRow className="border-b border-border">
-                <TableHead className="w-[15%] px-4 py-3 text-left font-medium">
-                  <Text type="normal">Kode</Text>
+                <TableHead
+                  className="w-[15%] cursor-pointer px-2 py-3 text-left font-medium"
+                  onClick={() => handleSort("code")}
+                >
+                  <div className="flex items-center">
+                    <Text type="normal">Kode</Text>
+                    <span className="inline-flex">{getSortIcon("code")}</span>
+                  </div>
                 </TableHead>
-                <TableHead className="w-[40%] px-4 py-3 text-left font-medium">
-                  <Text type="normal">Navn</Text>
+                <TableHead
+                  className="w-[40%] cursor-pointer px-2 py-3 text-left font-medium"
+                  onClick={() => handleSort("name")}
+                >
+                  <div className="flex items-center">
+                    <Text type="normal">Navn</Text>
+                    <span className="inline-flex">{getSortIcon("name")}</span>
+                  </div>
                 </TableHead>
-                <TableHead className="hidden w-[20%] px-4 py-3 text-left font-medium lg:table-cell">
-                  <Text type="normal">Sted</Text>
+                <TableHead
+                  className="hidden w-[20%] cursor-pointer px-2 py-3 text-left font-medium lg:table-cell"
+                  onClick={() => handleSort("place")}
+                >
+                  <div className="flex items-center">
+                    <Text type="normal">Sted</Text>
+                    <span className="inline-flex">{getSortIcon("place")}</span>
+                  </div>
                 </TableHead>
-                <TableHead className="hidden w-[25%] rounded-tr-lg px-4 py-3 text-left font-medium lg:table-cell">
-                  <Text type="normal">Adresse</Text>
+                <TableHead
+                  className="hidden w-[25%] cursor-pointer rounded-tr-lg px-2 py-3 text-left font-medium lg:table-cell"
+                  onClick={() => handleSort("address")}
+                >
+                  <div className="flex items-center">
+                    <Text type="normal">Adresse</Text>
+                    <span className="inline-flex">{getSortIcon("address")}</span>
+                  </div>
                 </TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
-              {filteredDairyCodes.map((dairyCode) => {
+              {sortedDairyCodes.map((dairyCode) => {
                 const { rowClass, indicatorClass } = getBovaerStyles(dairyCode.uses_bovaer);
 
                 return (
                   <TableRow key={dairyCode.id} className={`${rowClass} transition duration-150`}>
-                    <TableCell className={`px-4 py-3 ${indicatorClass}`}>
+                    <TableCell className={`px-3 py-2 ${indicatorClass}`}>
                       <Text type="normal">{dairyCode.code}</Text>
                     </TableCell>
-                    <TableCell className="px-4 py-3 font-medium">
+                    <TableCell className="px-2 py-2 font-medium">
                       <Text type="normal">{dairyCode.name}</Text>
                     </TableCell>
-                    <TableCell className="hidden px-4 py-3 lg:table-cell">
+                    <TableCell className="hidden px-2 py-2 lg:table-cell">
                       <Text type="normal">{titleCase(dairyCode.place)}</Text>
                     </TableCell>
-                    <TableCell className="hidden px-4 py-3 lg:table-cell">
+                    <TableCell className="hidden px-2 py-2 lg:table-cell">
                       <Text type="normal">{dairyCode.address}</Text>
                     </TableCell>
                   </TableRow>
@@ -160,7 +234,7 @@ export function MeirikoderTable({ dairyCodes }: { dairyCodes: DairyCode[] }) {
             <TableFooter>
               <TableRow>
                 <TableCell colSpan={4} className="px-4 py-2 text-sm">
-                  {filteredDairyCodes.length} resultater
+                  {sortedDairyCodes.length} resultater
                 </TableCell>
               </TableRow>
             </TableFooter>
