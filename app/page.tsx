@@ -6,7 +6,7 @@ export default async function Home() {
   const dairies = await fetchDairies();
   console.log({ dairies });
   return (
-    <div className="p-4">
+    <div>
       <CardGrid>
         {dairies.map((item, i) => (
           <CardGridItem key={i} dairy={item} />

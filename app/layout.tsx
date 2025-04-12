@@ -39,7 +39,7 @@ export default function RootLayout({
             <AppSidebar />
             <SidebarInset>
               <Header />
-              {children}
+              <div className="px-4 pt-4 md:px-8 md:pt-8">{children}</div>
             </SidebarInset>
           </SidebarProvider>
         </ThemeProvider>

@@ -2,12 +2,13 @@
 
 import React, { useState } from "react";
 import { DairyCode } from "@/types/dairycode";
+import { Text } from "../Text";
 
 export function SearchableTable({ dairyCodes }: { dairyCodes: DairyCode[] }) {
   const [searchTerm, setSearchTerm] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 10;
-
+  console.log("dairyCodes", dairyCodes);
   const filteredDairyCodes = dairyCodes.filter((dairyCode) => {
     const searchLower = searchTerm.toLowerCase();
     return (
@@ -58,23 +59,27 @@ export function SearchableTable({ dairyCodes }: { dairyCodes: DairyCode[] }) {
       </div>
 
       {/* Table container with horizontal scroll */}
-      <div className="mb-14 shadow-md">
+      <div className="shadow-base mb-14">
         <div className="overflow-x-auto rounded-lg">
           <table className="min-w-full table-fixed rounded-lg bg-card text-card-foreground">
             <colgroup>
-              <col className="w-6" />
-              <col className="w-[15%]" />
-              <col className="w-[40%]" />
-              <col className="w-[20%]" />
-              <col className="w-[25%]" />
+              <col className="w-1" />
+              <col className="w-[25%] lg:w-[15%]" />
+              <col className="w-[75%] lg:w-[40%]" />
+              <col className="hidden w-[20%] lg:table-column" />
+              <col className="hidden w-[25%] lg:table-column" />
             </colgroup>
             <thead>
               <tr className="border-b border-border bg-muted">
                 <th className="w-6 rounded-tl-lg"></th>
-                <th className="px-4 py-3 text-left font-medium">Kode</th>
+                <th className="px-4 py-3 text-left font-medium">
+                  <Text type="normal">Kode</Text>
+                </th>
                 <th className="px-4 py-3 text-left font-medium">Navn</th>
-                <th className="px-4 py-3 text-left font-medium">Sted</th>
-                <th className="rounded-tr-lg px-4 py-3 text-left font-medium">Adresse</th>
+                <th className="hidden px-4 py-3 text-left font-medium lg:table-cell">Sted</th>
+                <th className="hidden rounded-tr-lg px-4 py-3 text-left font-medium lg:table-cell">
+                  Adresse
+                </th>
               </tr>
             </thead>
             <tbody>
@@ -110,10 +115,18 @@ export function SearchableTable({ dairyCodes }: { dairyCodes: DairyCode[] }) {
                     className={`${lastRowClass} ${rowClass} transition duration-150`}
                   >
                     <td className={`${indicatorClass} w-6 ${lastRowLeftCorner}`}></td>
-                    <td className="px-4 py-3">{dairyCode.code}</td>
-                    <td className="px-4 py-3 font-medium">{dairyCode.name}</td>
-                    <td className="px-4 py-3">{titleCase(dairyCode.place)}</td>
-                    <td className={`px-4 py-3 ${lastRowRightCorner}`}>{dairyCode.address}</td>
+                    <td className="px-4 py-3">
+                      <Text type="normal">{dairyCode.code}</Text>
+                    </td>
+                    <td className="px-4 py-3 font-medium">
+                      <Text type="normal">{dairyCode.name}</Text>
+                    </td>
+                    <td className="hidden px-4 py-3 lg:table-cell">
+                      <Text type="normal">{titleCase(dairyCode.place)}</Text>
+                    </td>
+                    <td className={`hidden px-4 py-3 lg:table-cell ${lastRowRightCorner}`}>
+                      <Text type="normal">{dairyCode.address}</Text>
+                    </td>
                   </tr>
                 );
               })}
@@ -123,9 +136,9 @@ export function SearchableTable({ dairyCodes }: { dairyCodes: DairyCode[] }) {
 
         {/* Fixed pagination controls */}
         {filteredDairyCodes.length > itemsPerPage && (
-          <div className="mt-4 rounded-lg bg-muted px-4 py-3 text-sm text-muted-foreground">
+          <div className="mt-4 rounded-lg bg-muted px-4 py-3 text-sm">
             <div className="flex flex-wrap items-center justify-between gap-2">
-              <div>
+              <div className="text-muted-foreground">
                 Viser {startIndex + 1}-{Math.min(endIndex, filteredDairyCodes.length)} av{" "}
                 {filteredDairyCodes.length} resultater
               </div>
@@ -133,14 +146,14 @@ export function SearchableTable({ dairyCodes }: { dairyCodes: DairyCode[] }) {
                 <button
                   onClick={goToPrevPage}
                   disabled={currentPage === 1}
-                  className="min-w-[80px] rounded border border-border px-3 py-1 disabled:opacity-50"
+                  className="min-w-[80px] rounded border border-border px-3 py-1 hover:text-foreground disabled:opacity-50"
                 >
                   Forrige
                 </button>
                 <button
                   onClick={goToNextPage}
                   disabled={currentPage === totalPages}
-                  className="min-w-[80px] rounded border border-border px-3 py-1 disabled:opacity-50"
+                  className="min-w-[80px] rounded border border-border px-3 py-1 hover:text-foreground disabled:opacity-50"
                 >
                   Neste
                 </button>
