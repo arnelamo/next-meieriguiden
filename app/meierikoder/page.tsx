@@ -117,7 +117,7 @@ export default async function Meierikoder() {
                 </div>
               </div>
             </div>
-            <DialogFooter className="mt-4 sm:justify-end">
+            <DialogFooter className="my-6 sm:justify-end">
               <DialogClose asChild>
                 <Button type="button" variant="secondary">
                   Lukk

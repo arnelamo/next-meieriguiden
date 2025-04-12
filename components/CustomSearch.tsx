@@ -20,7 +20,7 @@ export function CustomSearch({ search, setSearch, placeholder }: CustomSearchPro
   };
 
   return (
-    <div className="relative min-w-48 grow">
+    <div className="relative">
       <Input
         type="text"
         placeholder={placeholder || "Søk..."}

@@ -24,6 +24,7 @@ import { CustomSearch } from "../CustomSearch";
 import { useSidebar } from "../ui/sidebar";
 import { Button } from "../ui/button";
 import { Trash2 } from "lucide-react";
+import { clear } from "console";
 
 export function MeirikoderTable({ dairyCodes }: { dairyCodes: DairyCode[] }) {
   const [searchTerm, setSearchTerm] = useState("");
@@ -87,6 +88,11 @@ export function MeirikoderTable({ dairyCodes }: { dairyCodes: DairyCode[] }) {
     }
   };
 
+  const clearFilters = () => {
+    setSearchTerm("");
+    setBovaerFilter("all");
+  };
+
   return (
     <div className="">
       <div className="flex flex-col">
@@ -107,23 +113,23 @@ export function MeirikoderTable({ dairyCodes }: { dairyCodes: DairyCode[] }) {
               value={bovaerFilter}
               onValueChange={(value: UsesBovaerStatus | "all") => setBovaerFilter(value)}
             >
-              <SelectTrigger className="w-full max-w-[200px]">
+              <SelectTrigger className="w-fit max-w-[200px] grow">
                 <SelectValue placeholder="Filter på Bovaer" />
               </SelectTrigger>
               <SelectContent>
                 <SelectGroup>
                   <SelectItem value="all">Alle</SelectItem>
-                  <SelectItem value="no">Bruker ikke Bovaer</SelectItem>
+                  <SelectItem value="no">Ikke Bovaer</SelectItem>
                   <SelectItem value="yes">Bruker Bovaer</SelectItem>
-                  <SelectItem value="soon">Bruker snart Bovaer</SelectItem>
-                  <SelectItem value="unknown">Ukjent status</SelectItem>
+                  <SelectItem value="soon">Snart Bovaer</SelectItem>
+                  <SelectItem value="unknown">Ukjent</SelectItem>
                 </SelectGroup>
               </SelectContent>
             </Select>
-            <Button variant={isMobile ? "secondary" : "secondary"}>
+            {/* <Button variant={isMobile ? "secondary" : "secondary"} onClick={clearFilters}>
               <Trash2 />
               {!isMobile && <Text type="small">Nullstill</Text>}
-            </Button>
+            </Button> */}
           </div>
         </div>
 
